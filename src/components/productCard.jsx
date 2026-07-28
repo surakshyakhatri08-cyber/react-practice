@@ -1,15 +1,13 @@
 // product card
-const ProductCard = () => {
+const ProductCard = ({product: { name, money, description }}) => {
   return (
     <div className='product-card'>
-      <img src={productImg} alt="CD Icon T-Shirt" className='product-img' />
+      {/* <img src={productImg} alt="CD Icon T-Shirt" className='product-img' /> */}
       
       <div className='product-details'>
-        <h2 className="product-title">CD Icon T-Shirt</h2>
-      <span className="product-price">Rs. 2999</span>
-      <p className="product-description">
-        Crafted in Italy from high-end 100% cotton jersey, offering a heavyweight feel that remains incredibly soft and breathable on the skin.
-      </p>
+        <h2 className="product-title">{name}</h2>
+      <span className="product-price">Rs. {money}</span>
+      <p className="product-description">{description}</p>
       <button className='btn-add-cart'>Add to cart</button>
       </div>
 
